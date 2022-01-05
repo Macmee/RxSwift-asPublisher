@@ -9,9 +9,9 @@ import SwiftUI
 
 @main
 struct TestRxWithSwiftUIApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      SubredditView(redditFeed: getReddit().asPublisher())
     }
+  }
 }

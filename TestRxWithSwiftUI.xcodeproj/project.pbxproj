@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		97A96C8427853F8C001B2181 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A96C8327853F8C001B2181 /* Tests_iOS.swift */; };
-		97A96C8627853F8C001B2181 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A96C8527853F8C001B2181 /* Tests_iOSLaunchTests.swift */; };
-		97A96C9027853F8C001B2181 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A96C8F27853F8C001B2181 /* Tests_macOS.swift */; };
-		97A96C9227853F8C001B2181 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A96C9127853F8C001B2181 /* Tests_macOSLaunchTests.swift */; };
 		97A96C9327853F8C001B2181 /* TestRxWithSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A96C6B27853F8B001B2181 /* TestRxWithSwiftUIApp.swift */; };
 		97A96C9427853F8C001B2181 /* TestRxWithSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A96C6B27853F8B001B2181 /* TestRxWithSwiftUIApp.swift */; };
-		97A96C9527853F8C001B2181 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A96C6C27853F8B001B2181 /* ContentView.swift */; };
-		97A96C9627853F8C001B2181 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A96C6C27853F8B001B2181 /* ContentView.swift */; };
+		97A96C9527853F8C001B2181 /* SubredditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A96C6C27853F8B001B2181 /* SubredditView.swift */; };
+		97A96C9627853F8C001B2181 /* SubredditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A96C6C27853F8B001B2181 /* SubredditView.swift */; };
 		97A96C9727853F8C001B2181 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97A96C6D27853F8C001B2181 /* Assets.xcassets */; };
 		97A96C9827853F8C001B2181 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97A96C6D27853F8C001B2181 /* Assets.xcassets */; };
+		97A96CA927854128001B2181 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 97A96CA827854128001B2181 /* RxBlocking */; };
+		97A96CAB27854128001B2181 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 97A96CAA27854128001B2181 /* RxCocoa */; };
+		97A96CAD27854128001B2181 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 97A96CAC27854128001B2181 /* RxRelay */; };
+		97A96CAF27854128001B2181 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 97A96CAE27854128001B2181 /* RxSwift */; };
+		97A96CB327854263001B2181 /* GetReddit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A96CB227854263001B2181 /* GetReddit.swift */; };
+		97A96CB427854263001B2181 /* GetReddit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A96CB227854263001B2181 /* GetReddit.swift */; };
+		97A96CB62786208D001B2181 /* Observable+asPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A96CB52786208D001B2181 /* Observable+asPublisher.swift */; };
+		97A96CB72786208D001B2181 /* Observable+asPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A96CB52786208D001B2181 /* Observable+asPublisher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,17 +42,15 @@
 
 /* Begin PBXFileReference section */
 		97A96C6B27853F8B001B2181 /* TestRxWithSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRxWithSwiftUIApp.swift; sourceTree = "<group>"; };
-		97A96C6C27853F8B001B2181 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		97A96C6C27853F8B001B2181 /* SubredditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubredditView.swift; sourceTree = "<group>"; };
 		97A96C6D27853F8C001B2181 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97A96C7227853F8C001B2181 /* TestRxWithSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestRxWithSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97A96C7827853F8C001B2181 /* TestRxWithSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestRxWithSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97A96C7A27853F8C001B2181 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		97A96C7F27853F8C001B2181 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		97A96C8327853F8C001B2181 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
-		97A96C8527853F8C001B2181 /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
 		97A96C8B27853F8C001B2181 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		97A96C8F27853F8C001B2181 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
-		97A96C9127853F8C001B2181 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		97A96CB227854263001B2181 /* GetReddit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetReddit.swift; sourceTree = "<group>"; };
+		97A96CB52786208D001B2181 /* Observable+asPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+asPublisher.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97A96CAD27854128001B2181 /* RxRelay in Frameworks */,
+				97A96CAB27854128001B2181 /* RxCocoa in Frameworks */,
+				97A96CAF27854128001B2181 /* RxSwift in Frameworks */,
+				97A96CA927854128001B2181 /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,8 +94,6 @@
 			children = (
 				97A96C6A27853F8B001B2181 /* Shared */,
 				97A96C7927853F8C001B2181 /* macOS */,
-				97A96C8227853F8C001B2181 /* Tests iOS */,
-				97A96C8E27853F8C001B2181 /* Tests macOS */,
 				97A96C7327853F8C001B2181 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,8 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				97A96C6B27853F8B001B2181 /* TestRxWithSwiftUIApp.swift */,
-				97A96C6C27853F8B001B2181 /* ContentView.swift */,
+				97A96C6C27853F8B001B2181 /* SubredditView.swift */,
 				97A96C6D27853F8C001B2181 /* Assets.xcassets */,
+				97A96CB227854263001B2181 /* GetReddit.swift */,
+				97A96CB52786208D001B2181 /* Observable+asPublisher.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -123,24 +129,6 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
-		97A96C8227853F8C001B2181 /* Tests iOS */ = {
-			isa = PBXGroup;
-			children = (
-				97A96C8327853F8C001B2181 /* Tests_iOS.swift */,
-				97A96C8527853F8C001B2181 /* Tests_iOSLaunchTests.swift */,
-			);
-			path = "Tests iOS";
-			sourceTree = "<group>";
-		};
-		97A96C8E27853F8C001B2181 /* Tests macOS */ = {
-			isa = PBXGroup;
-			children = (
-				97A96C8F27853F8C001B2181 /* Tests_macOS.swift */,
-				97A96C9127853F8C001B2181 /* Tests_macOSLaunchTests.swift */,
-			);
-			path = "Tests macOS";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -157,6 +145,12 @@
 			dependencies = (
 			);
 			name = "TestRxWithSwiftUI (iOS)";
+			packageProductDependencies = (
+				97A96CA827854128001B2181 /* RxBlocking */,
+				97A96CAA27854128001B2181 /* RxCocoa */,
+				97A96CAC27854128001B2181 /* RxRelay */,
+				97A96CAE27854128001B2181 /* RxSwift */,
+			);
 			productName = "TestRxWithSwiftUI (iOS)";
 			productReference = 97A96C7227853F8C001B2181 /* TestRxWithSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -249,6 +243,9 @@
 				Base,
 			);
 			mainGroup = 97A96C6527853F8B001B2181;
+			packageReferences = (
+				97A96CA727854128001B2181 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 97A96C7327853F8C001B2181 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -299,7 +296,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97A96C9527853F8C001B2181 /* ContentView.swift in Sources */,
+				97A96C9527853F8C001B2181 /* SubredditView.swift in Sources */,
+				97A96CB62786208D001B2181 /* Observable+asPublisher.swift in Sources */,
+				97A96CB327854263001B2181 /* GetReddit.swift in Sources */,
 				97A96C9327853F8C001B2181 /* TestRxWithSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,7 +307,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97A96C9627853F8C001B2181 /* ContentView.swift in Sources */,
+				97A96C9627853F8C001B2181 /* SubredditView.swift in Sources */,
+				97A96CB72786208D001B2181 /* Observable+asPublisher.swift in Sources */,
+				97A96CB427854263001B2181 /* GetReddit.swift in Sources */,
 				97A96C9427853F8C001B2181 /* TestRxWithSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,8 +318,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97A96C8627853F8C001B2181 /* Tests_iOSLaunchTests.swift in Sources */,
-				97A96C8427853F8C001B2181 /* Tests_iOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,8 +325,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97A96C9227853F8C001B2181 /* Tests_macOSLaunchTests.swift in Sources */,
-				97A96C9027853F8C001B2181 /* Tests_macOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +462,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7G8MJMXW55;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -494,6 +492,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7G8MJMXW55;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -526,6 +525,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7G8MJMXW55;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -552,6 +552,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7G8MJMXW55;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -715,6 +716,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		97A96CA727854128001B2181 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		97A96CA827854128001B2181 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97A96CA727854128001B2181 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		97A96CAA27854128001B2181 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97A96CA727854128001B2181 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		97A96CAC27854128001B2181 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97A96CA727854128001B2181 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		97A96CAE27854128001B2181 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97A96CA727854128001B2181 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 97A96C6627853F8B001B2181 /* Project object */;
 }
