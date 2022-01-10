@@ -7,6 +7,7 @@
 
 import Combine
 import SwiftUI
+import RxCocoa
 import RxSwift
 
 struct PostRow: View {
@@ -40,18 +41,63 @@ struct PostRow: View {
   }
 }
 
+class SubredditViewModel: ObservableObject {
+  
+  // MARK: - Inputs
+  @Published var subredditInput: String
+  
+  // MARK: - Outputs
+  @Published var postsOutput: [RedditPost] = []
+  
+  // MARK: - Privates
+  private var cancellableSet = Set<AnyCancellable>()
+  
+  init(startingSubreddit: String) {
+    subredditInput = startingSubreddit
+    $subredditInput
+      .debounce(for: .seconds(1), scheduler: DispatchQueue.main)
+      .map { subreddit in
+        getReddit(subreddit).asPublisher()
+      }
+      .switchToLatest()
+      .replaceError(with: [])
+      .assign(to: \.postsOutput, on: self)
+      .store(in: &self.cancellableSet)
+  }
+  
+}
+
 struct SubredditView: View {
-  var redditFeed: AnyPublisher<[RedditPost], Error>
-  @State private var posts = [RedditPost]()
-    var body: some View {
-      List(posts) {
+  
+  private enum Constant {
+    static let titlePrefix = "/r/"
+    static let titlePlaceholder = "Subreddit"
+    static let titleBackground = Color(red: 43/255, green: 53/255, blue: 53/255)
+  }
+
+  @ObservedObject var viewModel: SubredditViewModel
+  
+  init(viewModel: SubredditViewModel) {
+    self.viewModel = viewModel
+  }
+  
+  var body: some View {
+    VStack(spacing: 0) {
+      HStack(alignment: .center, spacing: 0) {
+        Spacer()
+        Text(Constant.titlePrefix).foregroundColor(.white)
+        TextField(Constant.titlePlaceholder, text: $viewModel.subredditInput)
+          .foregroundColor(.white)
+          .frame(maxWidth: 100)
+        Spacer()
+      }.frame(minHeight: 40)
+        .background(Constant.titleBackground)
+      List(viewModel.postsOutput) {
         PostRow(post: $0)
       }
-      .onReceive(redditFeed.assertNoFailure()) {
-        posts = $0
-      }
       .onAppear() {
-        UITableView.appearance().contentInset.top = -35
+        UITableView.appearance().contentInset.top = -20
       }
     }
+  }
 }

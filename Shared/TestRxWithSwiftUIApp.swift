@@ -11,7 +11,9 @@ import SwiftUI
 struct TestRxWithSwiftUIApp: App {
   var body: some Scene {
     WindowGroup {
-      SubredditView(redditFeed: getReddit().asPublisher())
+      SubredditView(
+        viewModel: SubredditViewModel(startingSubreddit: "EarthPorn")
+      )
     }
   }
 }

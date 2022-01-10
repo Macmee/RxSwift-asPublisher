@@ -34,8 +34,8 @@ struct SubredditChild: Decodable {
   let data: RedditPost
 }
 
-func getReddit() -> Observable<[RedditPost]> {
-  let request = URLRequest(url: URL(string: "https://www.reddit.com/r/earthporn.json")!)
+func getReddit(_ subreddit: String) -> Observable<[RedditPost]> {
+  let request = URLRequest(url: URL(string: "https://www.reddit.com/r/\(subreddit).json")!)
   return URLSession.shared.rx.data(request: request)
     .map { try JSONDecoder().decode(Subreddit.self, from: $0) }
     .map { $0.data.children.map { $0.data } }
