@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		973C2CEF279699F500FD2124 /* asPublisherSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C2CEE279699F500FD2124 /* asPublisherSpec.swift */; };
+		973C2CF0279699F500FD2124 /* asPublisherSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973C2CEE279699F500FD2124 /* asPublisherSpec.swift */; };
+		973C2CF327969A6500FD2124 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 973C2CF227969A6500FD2124 /* Nimble */; };
+		973C2CF627969B2200FD2124 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 973C2CF527969B2200FD2124 /* Quick */; };
+		973C2CF927969E0300FD2124 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 973C2CF827969E0300FD2124 /* RxCocoa */; };
+		973C2CFB27969E2A00FD2124 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 973C2CFA27969E2A00FD2124 /* RxBlocking */; };
+		973C2CFD27969E2A00FD2124 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 973C2CFC27969E2A00FD2124 /* RxRelay */; };
+		973C2CFF27969E2A00FD2124 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 973C2CFE27969E2A00FD2124 /* RxSwift */; };
+		973C2D0127969E2A00FD2124 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 973C2D0027969E2A00FD2124 /* RxTest */; };
+		973C2D0227969E8900FD2124 /* Observable+asPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A96CB52786208D001B2181 /* Observable+asPublisher.swift */; };
 		97A96C9327853F8C001B2181 /* TestRxWithSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A96C6B27853F8B001B2181 /* TestRxWithSwiftUIApp.swift */; };
 		97A96C9427853F8C001B2181 /* TestRxWithSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A96C6B27853F8B001B2181 /* TestRxWithSwiftUIApp.swift */; };
 		97A96C9527853F8C001B2181 /* SubredditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A96C6C27853F8B001B2181 /* SubredditView.swift */; };
@@ -41,6 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		973C2CEC279699F400FD2124 /* Tests iOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests iOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		973C2CED279699F400FD2124 /* Tests macOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests macOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		973C2CEE279699F500FD2124 /* asPublisherSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = asPublisherSpec.swift; sourceTree = "<group>"; };
 		97A96C6B27853F8B001B2181 /* TestRxWithSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestRxWithSwiftUIApp.swift; sourceTree = "<group>"; };
 		97A96C6C27853F8B001B2181 /* SubredditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubredditView.swift; sourceTree = "<group>"; };
 		97A96C6D27853F8C001B2181 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +89,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				973C2D0127969E2A00FD2124 /* RxTest in Frameworks */,
+				973C2CFF27969E2A00FD2124 /* RxSwift in Frameworks */,
+				973C2CFD27969E2A00FD2124 /* RxRelay in Frameworks */,
+				973C2CF927969E0300FD2124 /* RxCocoa in Frameworks */,
+				973C2CFB27969E2A00FD2124 /* RxBlocking in Frameworks */,
+				973C2CF627969B2200FD2124 /* Quick in Frameworks */,
+				973C2CF327969A6500FD2124 /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,12 +109,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		973C2CEB279699CD00FD2124 /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				973C2CEE279699F500FD2124 /* asPublisherSpec.swift */,
+				973C2CEC279699F400FD2124 /* Tests iOS-Bridging-Header.h */,
+				973C2CED279699F400FD2124 /* Tests macOS-Bridging-Header.h */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
+		973C2CF727969E0300FD2124 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		97A96C6527853F8B001B2181 = {
 			isa = PBXGroup;
 			children = (
+				973C2CEB279699CD00FD2124 /* Specs */,
 				97A96C6A27853F8B001B2181 /* Shared */,
 				97A96C7927853F8C001B2181 /* macOS */,
 				97A96C7327853F8C001B2181 /* Products */,
+				973C2CF727969E0300FD2124 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -186,6 +225,15 @@
 				97A96C8127853F8C001B2181 /* PBXTargetDependency */,
 			);
 			name = "Tests iOS";
+			packageProductDependencies = (
+				973C2CF227969A6500FD2124 /* Nimble */,
+				973C2CF527969B2200FD2124 /* Quick */,
+				973C2CF827969E0300FD2124 /* RxCocoa */,
+				973C2CFA27969E2A00FD2124 /* RxBlocking */,
+				973C2CFC27969E2A00FD2124 /* RxRelay */,
+				973C2CFE27969E2A00FD2124 /* RxSwift */,
+				973C2D0027969E2A00FD2124 /* RxTest */,
+			);
 			productName = "Tests iOS";
 			productReference = 97A96C7F27853F8C001B2181 /* Tests iOS.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -226,10 +274,12 @@
 					};
 					97A96C7E27853F8C001B2181 = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1320;
 						TestTargetID = 97A96C7127853F8C001B2181;
 					};
 					97A96C8A27853F8C001B2181 = {
 						CreatedOnToolsVersion = 13.1;
+						LastSwiftMigration = 1320;
 						TestTargetID = 97A96C7727853F8C001B2181;
 					};
 				};
@@ -245,6 +295,8 @@
 			mainGroup = 97A96C6527853F8B001B2181;
 			packageReferences = (
 				97A96CA727854128001B2181 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				973C2CF127969A6500FD2124 /* XCRemoteSwiftPackageReference "Nimble" */,
+				973C2CF427969B2200FD2124 /* XCRemoteSwiftPackageReference "Quick" */,
 			);
 			productRefGroup = 97A96C7327853F8C001B2181 /* Products */;
 			projectDirPath = "";
@@ -318,6 +370,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				973C2D0227969E8900FD2124 /* Observable+asPublisher.swift in Sources */,
+				973C2CEF279699F500FD2124 /* asPublisherSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				973C2CF0279699F500FD2124 /* asPublisherSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +629,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -588,6 +644,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Specs/Tests iOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "TestRxWithSwiftUI (iOS)";
@@ -598,6 +656,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -612,6 +671,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Specs/Tests iOS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "TestRxWithSwiftUI (iOS)";
@@ -623,6 +683,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -638,6 +699,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Specs/Tests macOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = "TestRxWithSwiftUI (macOS)";
 			};
@@ -647,6 +710,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -662,6 +726,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "Specs/Tests macOS-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = "TestRxWithSwiftUI (macOS)";
 			};
@@ -718,6 +783,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		973C2CF127969A6500FD2124 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		973C2CF427969B2200FD2124 /* XCRemoteSwiftPackageReference "Quick" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Quick.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		97A96CA727854128001B2181 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
@@ -729,6 +810,41 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		973C2CF227969A6500FD2124 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 973C2CF127969A6500FD2124 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+		973C2CF527969B2200FD2124 /* Quick */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 973C2CF427969B2200FD2124 /* XCRemoteSwiftPackageReference "Quick" */;
+			productName = Quick;
+		};
+		973C2CF827969E0300FD2124 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97A96CA727854128001B2181 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		973C2CFA27969E2A00FD2124 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97A96CA727854128001B2181 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		973C2CFC27969E2A00FD2124 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97A96CA727854128001B2181 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		973C2CFE27969E2A00FD2124 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97A96CA727854128001B2181 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		973C2D0027969E2A00FD2124 /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 97A96CA727854128001B2181 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
 		97A96CA827854128001B2181 /* RxBlocking */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 97A96CA727854128001B2181 /* XCRemoteSwiftPackageReference "RxSwift" */;
